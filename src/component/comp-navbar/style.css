@@ -1,3 +1,55 @@
-nav li {
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+nav {
+  height: 70px;
+  position: relative;
+}
+nav a.navbar-brand {
+  font-family: "Pacifico", cursive;
+  font-size: 35px;
   text-transform: capitalize;
+}
+nav .navbar-collapse ul {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 50%;
+}
+nav .navbar-collapse ul li a {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  transition: 0.3s;
+}
+nav .navbar-collapse ul li a.active {
+  margin: 0 1em;
+  padding: 10px;
+  position: relative;
+}
+nav .navbar-collapse ul li a.active i {
+  font-size: 30px;
+}
+nav .navbar-collapse ul li a.active i span {
+  font-size: 15px;
+}
+nav .navbar-collapse ul li a.active > span {
+  display: block;
+  top: 20px;
+}
+nav .navbar-collapse ul li a i {
+  font-size: 20px;
+  display: block;
+  width: 100%;
+}
+nav .navbar-collapse ul li a i:hover ~ span {
+  display: block;
+}
+nav .navbar-collapse ul li a > span {
+  position: absolute;
+  display: none;
+  transition: 0.3s;
+  transform: translateY(100%);
+  text-transform: capitalize;
+}
+nav .navbar-collapse.show ul li a > span {
+  display: block;
 }/*# sourceMappingURL=style.css.map */

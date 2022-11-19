@@ -1,12 +1,12 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "../comp-navbar/style.css";
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-md bg-light ">
+    <nav className="navbar shadow p-3 mb-5 bg-body rounded navbar-expand-md bg-light ">
       <div className="container-fluid">
-        <Link className="navbar-brand" to="/">
+        <NavLink className="navbar-brand" to="/">
           Navbar
-        </Link>
+        </NavLink>
         <button
           className="navbar-toggler"
           type="button"
@@ -21,44 +21,56 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="/">
-                Home
-              </Link>
+              <NavLink className="nav-link " aria-current="page" to="/home">
+                <i className="fa-solid fa-house"></i>
+                <span>Home</span>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/test">
-                test
-              </Link>
+              <NavLink className="nav-link" to="/test">
+                <i className="fa-solid fa-check-double"></i>
+                <span>test</span>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/search">
-                search
-              </Link>
+              <NavLink className="nav-link" to="/search">
+                <i className="fa-solid fa-magnifying-glass"></i>
+                <span>search</span>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/schedule">
-                schedule
-              </Link>
+              <NavLink className="nav-link" to="/schedule">
+                <i className="fa-regular fa-calendar-days"></i>
+                <span>schedule</span>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/notification">
-                notification
-              </Link>
+              <NavLink className="nav-link" to="/notification">
+                <i className="fa-solid fa-bell">
+                  <span class="position-absolute top-10 start-90 translate-middle badge rounded-pill bg-primary">
+                    0<span class="visually-hidden">unread messages</span>
+                  </span>
+                </i>
+                <span>notification</span>
+              </NavLink>
+            </li>
+            <li className="nav-item chat">
+              <NavLink className="nav-link " to="/chat">
+                <i className="fa-solid fa-message"></i>
+                <span>chat</span>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/chat">
-                chat
-              </Link>
+              <NavLink className="nav-link" to="/profile">
+                <i className="fa-solid fa-user"></i>
+                <span>profile</span>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/profile">
-                profile
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/signup">
-                sign up
-              </Link>
+              <NavLink className="nav-link" to="/signup">
+                <i className="fa-solid fa-right-from-bracket"></i>
+                <span> sign_out</span>
+              </NavLink>
             </li>
           </ul>
         </div>

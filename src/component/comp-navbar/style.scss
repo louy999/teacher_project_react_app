@@ -1,5 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import "../color";
 nav {
-  li {
+  height: 70px;
+  position: relative;
+  a.navbar-brand {
+    font-family: "Pacifico", cursive;
+    font-size: 35px;
     text-transform: capitalize;
+  }
+  .navbar-collapse {
+    ul {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      width: 50%;
+      li {
+        a {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          transition: 0.3s;
+
+          &.active {
+            margin: 0 1em;
+            padding: 10px;
+            position: relative;
+            i {
+              font-size: 30px;
+              span {
+                font-size: 15px;
+              }
+            }
+            > span {
+              display: block;
+              top: 20px;
+            }
+          }
+          i {
+            font-size: 20px;
+            display: block;
+            width: 100%;
+            &:hover ~ span {
+              display: block;
+            }
+          }
+          > span {
+            position: absolute;
+            display: none;
+            transition: 0.3s;
+            transform: translateY(100%);
+            text-transform: capitalize;
+          }
+        }
+      }
+    }
+    &.show {
+      ul {
+        li {
+          a {
+            > span {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// colors
+
+.chat {
+  a {
+    i {
+    }
+    span {
+    }
   }
 }
